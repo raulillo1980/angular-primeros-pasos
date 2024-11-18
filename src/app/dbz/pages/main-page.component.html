@@ -1,0 +1,13 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- le envio el dato al hijo que espera un @input y tb el recupero el @Output CaracterABorrar-->
+      <dbz-list [characterList]="characters" (CaracterABorrar)="onDeleteCharacter($event)"></dbz-list>
+  </div>
+  <div class="col">
+      <!-- recuperas por el @output que lleva el control add-charanter, que emite el valor NuevoCaracter-->
+      <dbz-add-character (NuevoCaracter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>
